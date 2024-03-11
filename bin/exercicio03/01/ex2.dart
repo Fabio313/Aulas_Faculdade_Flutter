@@ -1,12 +1,24 @@
 import 'dart:io';
 
+bool ParOuImpar(int i) {
+  return i % 2 == 0;
+}
+
+bool PositivoOuNegativo(int i) {
+  return i >= 0;
+}
+
 void main(List<String> args) {
-  print("valor A:");
+  print("Digite um numero:");
   int a = int.parse(stdin.readLineSync().toString());
-  print("valor B:");
-  int b = int.parse(stdin.readLineSync().toString());
 
-  int r = a + b;
+  if (ParOuImpar(a))
+    print("É par");
+  else
+    print("É impar");
 
-  print("Resultado: $r");
+  if (PositivoOuNegativo(a))
+    print("É positivo");
+  else
+    print("É negativo");
 }
